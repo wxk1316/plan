@@ -17,7 +17,7 @@ FAST_LIO、PCD地图和control_msgs源码本次没有改变，车机继续使用
 
 ## 车机更新
 
-在工作空间外clone/pull仓库并备份旧源码，再把六个目录替换到车机源码的相应位置。避免在同一个ROS工作空间中并列保留两份同名包。地图、标定和其他未改包保持车机有效版本。
+最新交付仓库为 [wxk1316/plan](https://github.com/wxk1316/plan)，使用main分支。在工作空间外clone/pull仓库并备份旧源码，按 [车机文件对应表](documentation/vehicle_file_mapping.md) 更新必要的25个文件；已安装前一版时只需更新表中的三个修复文件。car_launch中的run_fastlio.launch.py、run_sensor.launch.py保留现车配置，避免覆盖地图绝对路径和标定。避免在同一个ROS工作空间中并列保留两份同名包。
 
 ```bash
 # 在车机ROS工作空间根目录
